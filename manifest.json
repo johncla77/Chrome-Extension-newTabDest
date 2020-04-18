@@ -1,0 +1,36 @@
+{
+//Example of a comment in a manifest file
+
+  "manifest_version": 2,
+
+  "name": "NewTabDest Tester",
+  "version": "1.0",
+  "description": "New tab can be created in the current winodw or another window",
+  
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+
+  "browser_action": {
+    "default_title": "New Tab Window Tester",
+//    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+
+  "permissions": [
+    "tabs", 
+    "contextMenus",
+    "storage"
+  ],
+
+  "background": {
+    "scripts": ["newTabDest.js", "background.js"],
+    "persistent": false
+  } 
+}
